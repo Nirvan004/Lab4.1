@@ -46,7 +46,21 @@ function calculateTotalCost(price,quantity,taxRate){
     }
 
     totalCost= price * quantity * (1+taxRate);
-    return totalCost
+    
+    return totalCost;
+}
 
-
+function checkEligibility(age,isEmployed){
+    age = Number(age);
+    if (age>18){
+        if (isEmployed){
+            return "You are eligible for the program! :D";
+        }
+        else{
+            return "You are eligible, with conditions..."
+        }
+    }
+    else{
+        return "You are not eligible. :("
+    }
 }
