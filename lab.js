@@ -64,3 +64,27 @@ function checkEligibility(age,isEmployed){
         return "You are not eligible. :("
     }
 }
+function calculateTotalCost(price,quantity,taxRate,discount=0){
+    price = Number(price);
+    quantity = Number(quantity);
+    taxRate = Number(taxRate);
+    discount = Number(discount);
+
+    if (isNaN(price)) {
+        return "invalid input."
+    }
+    if (isNaN(quantity)) {
+        return "invalid input."
+    }
+    if (isNaN(taxRate)) {
+        return "invalid input."
+    }
+     if (isNaN(discount)) {
+        return "invalid input."
+    }
+
+    costbeforetax= price * quantity - discount;
+    totalCost= costbeforetax * taxRate; 
+    
+    return totalCost;
+}
