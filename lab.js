@@ -16,4 +16,16 @@ Return an appropriate string message for each scenario.
 Task 4: Refactoring for Reusability
 Refactor the calculateTotalCost function from Task 2 to include an optional discount parameter. If the discount is provided, the function should subtract the discount from the total cost before applying tax.
 If no discount is provided, calculate the total cost as before.
-/*
+*/
+function formatFullName(firstName,lastName){
+    if (!firstName){
+        return "Invalid name input.";
+    }
+    if (!lastName){
+        return "Invalid name input"
+    }
+    firstName = firstName.charAt(0).toUpperCase()+firstName.slice(1).toLowerCase();
+    lastName = lastName.charAt(0).toUpperCase()+lastName.slice(1).toLowerCase();
+
+    return `${lastName},${firstName}`;
+}
