@@ -29,3 +29,24 @@ function formatFullName(firstName,lastName){
 
     return `${lastName},${firstName}`;
 }
+
+function calculateTotalCost(price,quantity,taxRate){
+    price = Number(price);
+    quantity = Number(quantity);
+    taxRate = Number(taxRate);
+
+    if (isNaN(price)) {
+        return "invalid input."
+    }
+    if (isNaN(quantity)) {
+        return "invalid input."
+    }
+    if (isNaN(taxRate)) {
+        return "invalid input."
+    }
+
+    totalCost= price * quantity * (1+taxRate);
+    return totalCost
+
+
+}
